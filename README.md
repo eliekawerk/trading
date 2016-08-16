@@ -1,1 +1,1 @@
-Notebooks from the Udacity course on Machine Learning for Trading
+Notebooks from the my work on Machine Learning for Trading and Finance
