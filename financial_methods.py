@@ -27,17 +27,16 @@ def bsm_call_value(S0, K, T, r, sigma):
 
     '''
 
-    from numpy import log, sqrt, exp
+    from math import log, sqrt, exp
     from scipy import stats
 
     S0 = float(S0)
     d1 = (log(S0/K) + (r + 0.5 * sigma ** 2) * T)/ (sigma * sqrt(T))
-    d2 = (log(S0/K) + (r + 0.5 * sigma ** 2) * T)/ (sigma * sqrt(T))
+    d2 = (log(S0/K) + (r - 0.5 * sigma ** 2) * T)/ (sigma * sqrt(T))
     value = (S0 * stats.norm.cdf(d1, 0.0, 1.0) - K )* exp(-r * T) * stats.norm.cdf(d2, 0.0, 1.0)
-
     return value
 
-def bsm_vage(S0, K, T, r, sigma):
+def bsm_vega(S0, K, T, r, sigma):
     '''
     Vega of European option in BSM Model
 
@@ -60,13 +59,12 @@ def bsm_vage(S0, K, T, r, sigma):
         partial derivative of BSM formula with respect to sigma
     '''
 
-    from numpy import sqrt, log
+    from math import sqrt, log
     from scipy import stats
 
     S0 = float(S0)
     d1 = (log(S0/K) + (r + 0.5 * sigma ** 2) * T)/ (sigma * sqrt(T))
     vega = S0 * stats.norm.cdf(d1, 0.0, 1.0) *  sqrt(T)
-
     return vega
 
 
@@ -96,7 +94,13 @@ def bsm_call_imp_vol(S0, K, T, r, C0, sigma_est, it=100):
     '''        
 
     for i in range(it):
-        sigma_est -= ((bsm_call_value(S0, K, T, r,sigma_est) - C0) / bsm_vega(S0, K, T, r, sigma_est))
+        bcv = (bsm_call_value(S0, K, T, r,sigma_est) - C0)
+
+        bv = bsm_vega(S0, K, T, r, sigma_est)
+
+        sigma_est -= (bcv/bv)
+    return sigma_est
+
 
 
 
