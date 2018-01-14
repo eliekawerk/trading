@@ -39,5 +39,18 @@ How to decide what to focus on?
 For now, out of curiosity and ignorance I will focus on cryptocurrencies. 
 
 
+Outcomes
+--------
+
+The purpose of this is for me to develop the knowledge, skills and disposition to be a full-time trader. 
+
+Intermediate outcomes will be stepping the stepping stones on that path. These outcomes will be demonstrated as puython modules and jupyter notebooks. 
+
+With each notebook, the intent will be to focus on a particular knowledge or skill and use the notebook as a place for reflection, discussion and demonstration of the learning process. 
+
+Python modules will be used for script development and demonstration of wider programming and software development knowledge. 
+
+Additional items will be added if necessary. 
+
 
 
