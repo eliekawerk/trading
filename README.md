@@ -33,6 +33,27 @@ How shall we think about this?
 
 The question of what and how much are related in the sense that we want to be maximally exposed to upside behavior and minimally exposed to downside movement. So how much and to what shall we allocate our resources would be answerable if we understood the relationship certain assets have to one another. 
 
+
+Portfolio Gamma 
+---------------
+
+What is portfolio gamma? What happens when you need to do something critical but everyone else is doing the same thing and true scarcity emerges? The cost of surviving such a moment, when everyone faces existential threat, is this gamma. 
+
+
+Reflexivity
+-----------
+
+Tail-risk
+---------
+
+When an idea that is intended to create some benefit or safety net actually generates non-linear risk because the cost of backstopping/redeeming obligations triggered by the event ocurrence reveals itself to be too high and the exposure too widespread. 
+
+Beliefs about agents
+--------------------
+
+Persistent agent behaviour generates the belief that agent behaviour will be predictable and stable leading to resetting some price/terms of interaction with the agent.  
+
+
 How to decide what to focus on?
 -------------------------------
 
